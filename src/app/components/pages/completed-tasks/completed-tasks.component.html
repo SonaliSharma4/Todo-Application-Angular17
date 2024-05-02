@@ -1,0 +1,12 @@
+<app-page-title></app-page-title>
+
+<div class="flex flex-col mt-6">
+  <app-task-list
+    [taskList]="taskList"
+    (taskSaved)="updateTaskInList($event)"
+    (complete)="onComplete($event)"
+    (notComplete)="onNotComplete($event)"
+    (important)="onImportant($event)"
+    (notImportant)="onNotImportant($event)"
+  ></app-task-list>
+</div>
