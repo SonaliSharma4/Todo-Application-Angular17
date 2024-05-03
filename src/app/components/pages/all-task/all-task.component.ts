@@ -74,13 +74,4 @@ export class AllTaskComponent {
       this.getAllTasks(); // Refresh tasks after update
     });
   }
-  updateTask(updatedTask: any) {
-    this.httpService.updateTask(updatedTask).subscribe(() => {
-      const index = this.taskList.findIndex((task) => task.id === updatedTask.id);
-      if (index !== -1) {
-        this.taskList[index] = updatedTask;
-      }
-      this.getAllTasks(); // Refresh tasks after update (optional)
-    });
-  }
   }

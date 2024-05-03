@@ -9,5 +9,11 @@
   />
 </div>
 <div class="flex flex-col mt-6">
-  <app-task-list [taskList]="taskList" (complete)="onComplete($event)" (notComplete)="onNotComplete($event)" (important)="onImportant($event)" (notImportant)="onNotImportant($event)"></app-task-list>
+  <app-task-list
+    [taskList]="taskList"
+    (complete)="onComplete($event)"
+    (notComplete)="onNotComplete($event)"
+    (important)="onImportant($event)"
+    (notImportant)="onNotImportant($event)"
+  ></app-task-list>
 </div>

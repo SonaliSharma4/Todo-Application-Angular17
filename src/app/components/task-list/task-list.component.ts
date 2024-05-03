@@ -16,26 +16,20 @@ export class TaskListComponent {
   @Output() complete=new EventEmitter<any>();
   @Output()notImportant = new EventEmitter<any>();
   @Output() notComplete=new EventEmitter<any>();
-  //httpService = inject(HttpService);
+  @Output() taskSaved = new EventEmitter<any>();
+
   editingTask: any = null;
 
-   startEditing(task: any) {
+  startEditing(task: any) {
     this.editingTask = task;
   }
 
-  stopEditing() {
-    this.editingTask = null;
+  updateTask(updatedTask: any) {
+    const index = this.taskList.findIndex(t => t.id === updatedTask.id);
+    if (index !== -1) {
+      this.taskList[index] = updatedTask;
+    }
   }
-  // updateTask(updatedTask: any) {
-  //   this.httpService.updateTask(updatedTask).subscribe(() => {
-  //     const index = this.taskList.findIndex((task) => task.id === updatedTask.id);
-  //     if (index !== -1) {
-  //       this.taskList[index] = updatedTask;
-  //     }
-  //     this.getAllTasks(); // Refresh tasks after update (optional)
-  //   });
-  // }
-
 
   markImportant(task:any){
      //this.important.emit(task);

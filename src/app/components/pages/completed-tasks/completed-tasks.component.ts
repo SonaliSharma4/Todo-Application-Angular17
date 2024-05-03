@@ -50,10 +50,4 @@ export class CompletedTasksComponent {
         this.getAllTasks(); // Refresh tasks after update
       });
   }
-  updateTaskInList(updatedTask: any) {
-    const index = this.taskList.findIndex((task) => task.id === updatedTask.id);
-    if (index !== -1) {
-      this.taskList[index] = updatedTask;
-    }
-  }
 }

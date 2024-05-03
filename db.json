@@ -1,58 +1,52 @@
 {
   "tasks": [
     {
-      "id": "a17e",
-      "title": "",
-      "important": false
-    },
-    {
-      "id": "aaba",
-      "title": "",
+      "id": "ad0d",
+      "title": "ang",
+      "completed": true,
       "important": true
     },
     {
-      "id": "257f",
-      "title": "",
-      "important": false,
-      "completed": true
+      "id": "af37",
+      "title": "py",
+      "completed": true,
+      "important": true
     },
     {
-      "id": "c17b",
-      "title": "forms - reactive , template and validations"
+      "id": "e157",
+      "title": "ht",
+      "completed": true,
+      "important": true
     },
     {
-      "id": "494d",
-      "title": ""
+      "id": "2190",
+      "title": "css",
+      "completed": true,
+      "important": true
     },
     {
-      "id": "e7b7",
-      "title": "two way data binding"
+      "id": "50a5",
+      "title": "type script ",
+      "completed": false,
+      "important": true
     },
     {
-      "id": "b75b",
-      "title": "routing"
+      "id": "ec47",
+      "title": "javascript ",
+      "completed": true,
+      "important": false
     },
     {
-      "id": "bb97",
-      "title": "services",
-      "important": false,
-      "completed": false
+      "id": "8107",
+      "title": "todoapplication",
+      "completed": true,
+      "important": true
     },
     {
-      "id": "6896",
-      "title": "rxjx operators"
-    },
-    {
-      "id": "e75f",
-      "title": "git "
-    },
-    {
-      "id": "1daa",
-      "title": "interview questions"
-    },
-    {
-      "id": "bffc",
-      "title": "asdfghjk"
+      "id": "6a93",
+      "title": "type your task",
+      "completed": true,
+      "important": true
     }
   ]
 }

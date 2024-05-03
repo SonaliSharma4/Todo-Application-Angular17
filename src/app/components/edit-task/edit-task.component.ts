@@ -13,15 +13,14 @@ import { CommonModule } from '@angular/common';
   styleUrl: './edit-task.component.css'
 })
 export class EditTaskComponent {
-  @Input() editedTask: any;
+  @Input() task: any;
   @Output() taskSaved = new EventEmitter<any>();
-  httpService = inject(HttpService);
-  
-  constructor() {}
+
+  constructor(private httpService: HttpService) {}
 
   saveEditedTask() {
-    if (this.editedTask) {
-      this.httpService.updateTask(this.editedTask).subscribe(
+    if (this.task) {
+      this.httpService.updateTask(this.task).subscribe(
         (updatedTask: any) => {
           console.log('Task updated successfully:', updatedTask);
           this.taskSaved.emit(updatedTask); // Emit updated task to parent component
@@ -32,6 +31,4 @@ export class EditTaskComponent {
       );
     }
   }
-
-
 }
