@@ -45,7 +45,7 @@ export class ImportantTasksComponent {
     onNotComplete(task: any) {
       task.completed=false;
       this.httpService.updateTask(task).subscribe(() => {
-        this.getAllTasks(); // Refresh tasks after update
+        this.getAllTasks(); 
       });
   }
     onImportant(task:any){
@@ -58,7 +58,7 @@ export class ImportantTasksComponent {
       onNotImportant(task: any) {
         task.important=false;
         this.httpService.updateTask(task).subscribe(() => {
-          this.getAllTasks(); // Refresh tasks after update
+          this.getAllTasks(); 
         });
     }
 }

@@ -4,16 +4,16 @@ import { ImportantTasksComponent } from './components/pages/important-tasks/impo
 import { CompletedTasksComponent } from './components/pages/completed-tasks/completed-tasks.component';
 
 export const routes: Routes = [
-    {
-        path:"",
-        component: AllTaskComponent,
-    },
-    {
-        path:"importants",
-        component: ImportantTasksComponent,
-    },
-    {
-        path:"completed",
-        component: CompletedTasksComponent,
-    },
+  {
+    path: '',
+    component: AllTaskComponent,
+  },
+  {
+    path: 'importants',
+    component: ImportantTasksComponent,
+  },
+  {
+    path: 'completed',
+    component: CompletedTasksComponent,
+  },
 ];

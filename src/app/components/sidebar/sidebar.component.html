@@ -1,7 +1,28 @@
-<aside class="fixed top-16 w-80 shadow-lg rounded border border-gray-300 h-[calc(100vh-4rem)]">
-    <ul>
-      <li [routerLink]="'/'" class="p-4 cursor pointer text-blue-600" routerLinkActive="bg-blue-100 border-l-4 border-blue-500 font-bold" [routerLinkActiveOptions]="{exact: true}">All</li>
-      <li [routerLink]="'/importants'" class="p-4 cursor pointer text-blue-600" routerLinkActive="bg-blue-100 border-l-4 border-blue-500 font-bold">Important</li>
-      <li [routerLink]="'/completed'" class="p-4 cursor pointer text-blue-600" routerLinkActive="bg-blue-100 border-l-4 border-blue-500 font-bold">Completed</li>
-    </ul>
-  </aside>
+<aside
+  class="fixed top-16 w-80 shadow-lg rounded border border-gray-300 h-[calc(100vh-4rem)]"
+>
+  <ul>
+    <li
+      [routerLink]="'/'"
+      class="p-4 cursor pointer text-blue-600"
+      routerLinkActive="bg-blue-100 border-l-4 border-blue-500 font-bold"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      All
+    </li>
+    <li
+      [routerLink]="'/importants'"
+      class="p-4 cursor pointer text-blue-600"
+      routerLinkActive="bg-blue-100 border-l-4 border-blue-500 font-bold"
+    >
+      Important
+    </li>
+    <li
+      [routerLink]="'/completed'"
+      class="p-4 cursor pointer text-blue-600"
+      routerLinkActive="bg-blue-100 border-l-4 border-blue-500 font-bold"
+    >
+      Completed
+    </li>
+  </ul>
+</aside>

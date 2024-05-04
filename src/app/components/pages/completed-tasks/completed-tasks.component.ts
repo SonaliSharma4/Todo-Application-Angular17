@@ -34,7 +34,7 @@ export class CompletedTasksComponent {
     onNotComplete(task: any) {
       task.completed=false;
       this.httpService.updateTask(task).subscribe(() => {
-        this.getAllTasks(); // Refresh tasks after update
+        this.getAllTasks(); 
       });
   }
     onImportant(task:any){
@@ -47,7 +47,7 @@ export class CompletedTasksComponent {
     onNotImportant(task: any) {
       task.important=false;
       this.httpService.updateTask(task).subscribe(() => {
-        this.getAllTasks(); // Refresh tasks after update
+        this.getAllTasks(); 
       });
   }
 }
