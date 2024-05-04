@@ -28,7 +28,7 @@ export class ImportantTasksComponent {
       this.httpService.getAllTasks().subscribe((result:any)=>{
         this.taskList=result.filter((x:any)=>x.important==true);
         this.filterTasks(this.stateService.searchSubject.value || '');
-      })
+      });
     }
     filterTasks(searchQuery: string) {
       this.filteredTaskList = this.taskList.filter((task) =>

@@ -3,6 +3,7 @@ import { PageTitleComponent } from '../../page-title/page-title.component';
 import { TaskListComponent } from '../../task-list/task-list.component';
 import { HttpService } from '../../../services/http.service';
 import { EditTaskComponent } from '../../edit-task/edit-task.component';
+import { StateService } from '../../../services/state.service';
 
 @Component({
   selector: 'app-completed-tasks',
@@ -13,15 +14,27 @@ import { EditTaskComponent } from '../../edit-task/edit-task.component';
 })
 export class CompletedTasksComponent {
   taskList:any[]=[];
+  filteredTaskList: any[] = [];
   httpService = inject(HttpService);
+  stateService = inject(StateService);
   
   ngOnInit(){
+    this.stateService.searchSubject.subscribe((searchQuery) => {
+      this.filterTasks(searchQuery);
+    });
     this.getAllTasks();
   }
     getAllTasks(){
       this.httpService.getAllTasks().subscribe((result:any)=>{
         this.taskList=result.filter((x:any)=>x.completed==true);
+        this.filterTasks(this.stateService.searchSubject.value || '');
       });
+    }
+
+    filterTasks(searchQuery: string) {
+      this.filteredTaskList = this.taskList.filter((task) =>
+        task.title.toLowerCase().includes(searchQuery.toLowerCase())
+      );
     }
     
     onComplete(task:any){
