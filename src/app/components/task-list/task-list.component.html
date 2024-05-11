@@ -12,13 +12,7 @@
         (taskSaved)="updateTask($event)"
       ></app-edit-task>
   }
-  <!-- <p *ngIf="editingTask !== task; else editTask">{{ task.title }}</p>
-    <ng-template #editTask>
-      <app-edit-task
-        [task]="task"
-        (taskSaved)="updateTask($event)"
-      ></app-edit-task>
-    </ng-template> --> 
+
   <div class="flex gap-4">
     @if(task.important){
     <svg
